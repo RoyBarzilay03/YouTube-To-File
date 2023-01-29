@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube To File",
+  "version": "1.0.0",
+  "author": "Roy Barzilay",
+  "description": "Download a video or an audio file from a YouTube tab with a single click of a button!",
+  "icons": {
+    "128": "Logo.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "Logo Action.png",
+      "24": "Logo Action.png",
+      "32": "Logo Action.png"
+    },
+    "default_title": "YouTube To File",
+    "default_popup": "index.html"
+  },
+  "permissions": ["tabs", "storage", "downloads"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "download-current": {
+      "suggested_key": "Alt+Shift+D",
+      "description": "1/Download from active YouTube tab"
+    },
+    "download-all": {
+      "suggested_key": "Alt+Shift+A",
+      "description": "2/Download from all YouTube tabs"
+    },
+    "download-playlist": {
+      "suggested_key": "Alt+Shift+P",
+      "description": "3/Download from public YouTube playlist"
+    }
+  }
+}
